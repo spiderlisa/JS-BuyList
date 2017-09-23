@@ -2,13 +2,91 @@
 <html>
 <head lang="uk">
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>My List</title>
+    
+    <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
-<body>
-<h1>Hello World</h1>
-<p>Hello Git</p>
+<body style>
+<div class="main">
+    <div class="center">
+        <div class="left">
+            <div class="raised">
+                <div class="small-container">
+                    <div class="search-group">
+                        <input id="name" type="text" placeholder="Назва товару"> 
+                        <button id="add">Додати</button>
+                    </div>
+                </div>
+                <div class="row-container">
+                    <div class="empty">
+                        <div class="left-column">
+                            Помідори
+                        </div>
+                        <div class="central-column">
+                            <button class="round red"> - </button>
+                            <span class="quantity-square"> 1 </span>
+                            <button class="round green" > + </button>
+                        </div>
+                        <div class="right-column">
+                            <button class="buy">Куплено</button>
+                            <button class="delete red">×</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-container">
+                    <div class="empty">
+                        <div class="left-column">
+                            Печиво
+                        </div>
+                        <div class="central-column">
+                            <button class="round red"> - </button>
+                            <span class="quantity-square"> 1 </span>
+                            <button class="round green" > + </button>
+                        </div>
+                        <div class="right-column">
+                            <button class="buy">Куплено</button>
+                            <button class="delete red">×</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-container">
+                    <div class="empty">
+                        <div class="left-column">
+                           Сир 
+                        </div>
+                        <div class="central-column">
+                            <button class="round red"> - </button>
+                            <span class="quantity-square"> 1 </span>
+                            <button class="round green" > + </button>
+                        </div>
+                        <div class="right-column">
+                            <button class="buy">Куплено</button>
+                            <button class="delete red">×</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="raised">
+                <div class="small-container header">Залишилося</div>
+                <div class="small-container">
+                    <span class="gray-product">Помідори
+                        <span class="quantity-square orange">1</span>
+                    </span>
+                    <span class="gray-product">Печиво
+                        <span class="quantity-square orange">1</span>
+                    </span>
+                    <span class="gray-product">Сир
+                        <span class="quantity-square orange">1</span>
+                    </span>
+                </div>
+                <div class="small-container header">Куплено</div>
+                <div class="small-container last">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
