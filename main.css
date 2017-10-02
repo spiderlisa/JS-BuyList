@@ -12,6 +12,45 @@
     box-shadow: 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
 }
 
+.badge {
+    position: fixed;
+    bottom: -45px;
+    height: 78px;
+    left: 30px;
+    width: 140px;
+    background: rgb(126, 0, 162);
+    border: 2px rgb(126, 0, 162);
+    border-radius: 6px 6px 0px 0px;
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+
+}
+
+.badge:hover {
+    transition: all 2s ease;
+    bottom: 0px;
+    background: rgb(64, 2, 218);
+    border: 2px rgb(64, 2, 218);
+}
+
+.badge>div {
+    color: white;
+    font-size: 13px;
+    display: block;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.badge>div:first-child {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 0px;
+}
+
+.badge>div:last-child {
+    padding-top: 0px;
+}
+
 body {
     background-color: #d1d1d1;
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -204,6 +243,10 @@ body {
     border-bottom: 1px solid rgba(34,36,38,.15);
 }
 
+.tooltip {
+
+}
+
 .quantity-square {
     display: inline-block;
     box-sizing: border-box;
@@ -218,4 +261,26 @@ body {
     font-size: 12px;
     text-aling: center;
     color: rgba(0,0,0,.6);
+}
+
+@media (max-width: 600px){
+    .left {
+        width: 95%;
+        min-width: 445px;
+    }
+    .right {
+        width: 95%;
+        min-width: 165px;
+    }
+}
+
+@media print {
+    .badge>div:first-child {
+        display: none;
+    }
+
+    .badge {
+        bottom: -30px;
+        border: 2px solid black; !important;
+    }
 }
