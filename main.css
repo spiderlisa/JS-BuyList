@@ -1,15 +1,19 @@
-#add {
-    padding: 7px 28px 7px 28px;
-    margin: 0px;
-    height: 37px;
-    width: 108px;
-    border: 0px;
-    border-radius: 0rem 0.2rem 0.2rem 0;
-    background-color: dodgerblue;
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-    box-shadow: 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+.add {
+    padding: 7px 28px 7px 28px; !important;
+    margin: 0px; !important;
+    height: 37px; !important;
+    width: 108px; !important;
+    border: 0px; !important;
+    border-radius: 0rem 0.2rem 0.2rem 0; !important;
+    background-color: dodgerblue; !important;
+    color: white; !important;
+    font-size: 14px; !important;
+    font-weight: 700; !important;
+    box-shadow: 0 -0.3em 0 0 rgba(34,36,38,.15) inset; !important;
+}
+
+.add-after {
+    background: red; !important;
 }
 
 .badge {
@@ -51,13 +55,10 @@
     padding-top: 0px;
 }
 
+
 body {
     background-color: #d1d1d1;
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}
-
-button:hover {
-    cursor: pointer;
 }
 
 .buy {
@@ -70,9 +71,13 @@ button:hover {
     border: 1px rgba(0,0,0,.15) inset; !important;
     border-radius: 0.2rem;
     box-shadow: 0px -3px 0px 0px rgba(34,36,38,.1) inset; !important;
+    color: rgba(0,0,0,.6); !important;
     font-weight: 700; !important;
     font-size: 10px; !important;
-    color: rgba(0,0,0,.6); !important;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .center {
@@ -86,6 +91,11 @@ button:hover {
     padding: 0px 14px 2px;
     min-width: 140px;
     margin: auto;
+    text: title;
+}
+
+.crossed {
+
 }
 
 .delete {
@@ -103,7 +113,7 @@ button:hover {
 
 .empty {
     display: flex;
-    width: auto;
+    width: 104%;
     height: 48px;
     box-sizing: border-box;
     margin: -14px;
@@ -131,7 +141,7 @@ button:hover {
     border-radius: 10px;
     color: white;
     font-size: 9px;
-    width: 9px;
+    min-width: 9px;
     height: 9px;
     text-align: center;
     margin: 0px;
@@ -150,17 +160,17 @@ button:hover {
 
 .left {
     float: left;
-    min-width: 460px;
+    min-width: 445px;
     width: 65%;
     margin: 10px;
 }
 
 .left-column {
     display: inline-block;
-    padding: 14px;
-    min-width: 120px;
+    padding: 17px 14px 0px 15px;
     width: 120px;
-    max-width: 120px;
+    min-width: 85px;
+    font-size: 13px;
 }
 
 .main {
@@ -174,9 +184,13 @@ button:hover {
     max-width: 100%;
     border: 1px solid rgba(34,36,38,.15);
     border-radius: 0.2rem 0rem 0rem 0.2rem;
-    color: rgba(34,36,38,.15);
+    color: rgba(34,36,38,.5);
     font-size: 14px;
     padding-left: 14px
+}
+
+.one-item {
+
 }
 
 .raised {
@@ -195,7 +209,7 @@ button:hover {
 
 .right {
     display: inline-block;
-    min-width: 160px;
+    min-width: 165px;
     width: 30%;
     margin: 10px;
 }
@@ -226,11 +240,11 @@ button:hover {
     height: 19px;
     padding: 14px;
     border: 0px;
-    border-bottom: 1px solid rgba(34,36,38,.15);
+    border-top: 1px solid rgba(34,36,38,.15);
 }
 
-.row-container:last-child {
-    border: 0px;
+.row-container:first-child{
+    border-top: 0px;
 }
 
 .search-group {
@@ -244,7 +258,7 @@ button:hover {
     padding: 14px;
     width: auto;
     border: 0px;
-    border-bottom: 1px solid rgba(34,36,38,.15);
+    border-bottom: 1px solid rgba(34,36,38,0.15);
 }
 
 .toolbase {
@@ -252,7 +266,7 @@ button:hover {
  }
 
 .toolbase .tooltip {
-    display: none;
+    display: inline;
     content: "";
     opacity: 0;
     background: rgba(126,0,162,0.8);
@@ -269,11 +283,6 @@ button:hover {
     transition: all 2s ease;
 }
 
-.toolbase:hover .tooltip {
-    display: inline;
-    opacity: 1;
-}
-
 .toolbase .tooltip::after {
     content: "";
     position: absolute;
@@ -288,7 +297,7 @@ button:hover {
 .quantity-square {
     display: inline-block;
     box-sizing: border-box;
-    width: 27px;
+    min-width: 27px;
     height: 27px;
     padding: 7px 10px 7px 10px;
     margin: 4px 2px 0 2px;
@@ -299,6 +308,7 @@ button:hover {
     font-size: 12px;
     text-aling: center;
     color: rgba(0,0,0,.6);
+    content: '1';
 }
 
 @media (max-width: 600px){
