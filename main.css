@@ -94,9 +94,11 @@ button:hover {
     text: title;
 }
 
-.crossed {
-
+span.crossed {
+    text-decoration: line-through;
 }
+
+
 
 .delete {
     float: right;
@@ -127,11 +129,14 @@ button:hover {
     border: 0px;
     border-radius: 3px;
     background: #E8E8E8;
+    text-align: justify;
+
+}
+
+.gray-product>.title {
+    color: rgba(0,0,0,.6);
     font-weight: 700;
     font-size: 9px;
-    text-align: justify;
-    color: rgba(0,0,0,.6);
-
 }
 
 .gray-product>.orange {
@@ -173,6 +178,24 @@ button:hover {
     font-size: 13px;
 }
 
+.left-name {
+    display: none;
+    margin: 14px;
+    padding: 0px;
+    border: 1px gray;
+    border-radius: 2px;
+    color: black;
+    font-style: italic;
+    width: 120px;
+    min-width: 85px;
+    font-size: 13px;
+}
+
+.left-name:focus {
+    border: 1px dodgerblue;
+    border-radius: 2px;
+}
+
 .main {
     margin: auto;
     padding-top: 80px;
@@ -187,6 +210,10 @@ button:hover {
     color: rgba(34,36,38,.5);
     font-size: 14px;
     padding-left: 14px
+}
+
+#name:focus, .left-name:focus, button:focus {
+    outline:none;
 }
 
 .one-item {
