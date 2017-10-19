@@ -1,31 +1,4 @@
 $(function () {
-
-    var timer;
-    $('button').mouseenter(function () {
-        $(this).css('filter', 'brightness(93%)');
-        timer = setTimeout(function () {
-            $(this).find('.tooltip').css("opacity", "1")
-            $(this).find('.tooltip').show(200);
-        }, 1500);
-    }).mouseleave(function () {
-        clearTimeout(timer);
-        $(this).find('.tooltip').hide(200);
-        $(this).css('filter', 'brightness(100%)');
-    }).mousedown(function () {
-        $(this).css('filter', 'brightness(83%)');
-    }).mouseup(function () {
-        $(this).css('filter', 'brightness(93%)');
-    });
-
-    $('#name').focus(function () {
-        $(this).css('border-color', 'dodgerblue');
-    }).blur(function () {
-        $(this).css('border-color', 'rgba(34,36,38,.15)');
-    });
-
-
-    /* Adding new item */
-
     $(".add").click(function () {
         var text = $("#name").val();
         if (text!="") {
@@ -61,16 +34,19 @@ $(function () {
 
         var quantity = 1;
 
-        $item.find(".left-column").on('click', function () {
+        $item.find(".left-column").click(function () {
             $item.find(".left-column").hide();
             $item.find(".left-name").show().val(name);
 
             $(document).keypress(function (e) {
-                if( !($("#name").is(":focus")) && ($item.find(".left-name").val()!="") ) {
-                    var new_name = $item.find(".left-name").val();
-                    $item.find(".left-name").hide();
-                    $item.find(".left-column").text(new_name).show();
-                    name = new_name;
+                if (e.which == 13) {
+                    if (!($("#name").is(":focus")) && ($item.find(".left-name").val() != "")) {
+                        var new_name = $item.find(".left-name").val();
+                        $item.find(".left-name").hide();
+                        $item.find(".left-column").text(new_name).show();
+                        $small.find('.title').text(new_name);
+                        name = new_name;
+                    }
                 }
             })
         })
@@ -124,7 +100,7 @@ $(function () {
                         $item.find('.left-column').css('text-decoration', 'line-through');
                         $small.hide().appendTo(BOUGHT_LIST).fadeIn(fade_time);
                     });
-                    $small.find('.label').css('text-decoration', 'line-through');
+                    $small.find('.title').css('text-decoration', 'line-through');
 
                 } else {
                     $item.find('.round').css('visibility', 'visible');
@@ -136,7 +112,7 @@ $(function () {
                         $small.hide().appendTo(LEFT_LIST).fadeIn(fade_time);
                     });
 
-                    $small.find('.label').css('text-decoration', 'none');
+                    $small.find('.title').css('text-decoration', 'none');
 
                 }
                 $item.fadeIn(fade_time);
@@ -148,6 +124,25 @@ $(function () {
             $item.hide().appendTo(LIST).slideDown(fade_time);
             $small.hide().appendTo(LEFT_LIST).fadeIn(fade_time);
         }
+
+        $('button').mouseenter(function () {
+            $(this).css('filter', 'brightness(93%)');
+            $(this).find('.tooltip').delay(800).slideUp(300).fadeIn(400);
+            //$(this).find('.tooltip').show(200);
+        }).mouseleave(function () {
+            $(this).find('.tooltip').fadeOut(400);
+            $(this).css('filter', 'brightness(100%)');
+        }).mousedown(function () {
+            $(this).css('filter', 'brightness(83%)');
+        }).mouseup(function () {
+            $(this).css('filter', 'brightness(93%)');
+        });
+
+        $('#name').focus(function () {
+            $(this).css('border-color', 'dodgerblue');
+        }).blur(function () {
+            $(this).css('border-color', 'rgba(34,36,38,.15)');
+        });
     }
 
 })
