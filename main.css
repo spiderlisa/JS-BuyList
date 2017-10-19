@@ -212,6 +212,7 @@ span.crossed {
 }
 
 .one-item {
+    display: none;
 }
 
 .raised {
@@ -273,6 +274,10 @@ span.crossed {
     height: 100%;
     border-radius: 0.25rem;
     display: flex;
+}
+
+.small-item {
+    display: none;
 }
 
 .small-container {
