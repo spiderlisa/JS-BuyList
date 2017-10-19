@@ -1,4 +1,5 @@
 $(function () {
+
     $(".add").click(function () {
         var text = $("#name").val();
         if (text!="") {
@@ -27,8 +28,8 @@ $(function () {
 
         var bought = false;
         var fade_time = 300;
-        var $item = $(ITEM_TEMPLATE);
-        var $small = $(SMALL_ITEM_TEMPLATE);
+        var $item = $(ITEM_TEMPLATE).css('display', 'block');
+        var $small = $(SMALL_ITEM_TEMPLATE).css('display', 'inline-block');
         $item.find('.left-column').text(name);
         $small.find('.title').text(name);
 
@@ -127,10 +128,7 @@ $(function () {
 
         $('button').mouseenter(function () {
             $(this).css('filter', 'brightness(93%)');
-            $(this).find('.tooltip').delay(800).slideUp(300).fadeIn(400);
-            //$(this).find('.tooltip').show(200);
         }).mouseleave(function () {
-            $(this).find('.tooltip').fadeOut(400);
             $(this).css('filter', 'brightness(100%)');
         }).mousedown(function () {
             $(this).css('filter', 'brightness(83%)');
@@ -144,5 +142,9 @@ $(function () {
             $(this).css('border-color', 'rgba(34,36,38,.15)');
         });
     }
+
+    add_item("Помідори");
+    add_item("Печиво");
+    add_item("Cир");
 
 })
